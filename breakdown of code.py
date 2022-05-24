@@ -21,44 +21,69 @@ print(first_number, "+", second_number, "=", result)
 print("-------------------------------------------")
 print()
 
-# Big box containg the result of the equation entered and a division sign along with the size being 5
+# Big box contains the result of the equation entered and a division sign along with the size being 5
 big = int(result // 5)
+rezL = result % big
 
 medium = int(result // 3)
-"""'/' IS DIVIDE"""
-small = int(result // 1)
-# Forth variable convering the name to x
-x = result
-"""Trying to make the Big box fill first before heading to the next avaliable number being 3/medium box ect"""
-
-print()
-
-print(big, "Big")
-print(medium, "Medium ")
-print(small, "small")
-print()
-
-rezL = result % big
 rezM = result % medium
-rezS = result % small
 
+small = int(result // 1)
+rezS = result % small
+# Forth variable converting the name to x
+x = result
+
+print(big)
+print(medium)
+print(small)
+print()
+
+print("Just my little table for the remainder wont be in the final\n")
 print("RemainderL", rezL)
 print("RemainderM", rezM)
 print("RemainderS", rezS)
-
 
 print()
 
 if x > 0:
     for i in range(1, x):
         if rezL >= 0:
-            print(big, "[Big Boxes filled1]")
+            print(big, "[Big Boxes filled.]")
+            if rezL == 9:
+                print(rezL, "[Medium Boxes filled]")
+            if rezL == 6:
+                print(rezL, "[Medium Boxes filled]")
+            if rezL == 4:
+                print(rezL, "[Small Boxes filled.]")
             if rezL == 3:
-                print("med", rezL)
-            if rezL == 1:
-                print("small", rezL)
+                print(rezM, "[Medium Boxes filled.]")
             if rezL == 2:
-                print("small", rezL)
+                print(rezL, "[Small Boxes filled]")
+            if rezL == 1:
+                print(rezL, "[Small Boxes filled.]")
+
+            break
 
 
-        break
+"""Test case: Testing that the users inputs compiles 
+input: (None)
+expected output: crash
+actual output: crash
+result fail"""
+
+"""Test case: Testing that the users inputs compiles 
+input: (9, 9)
+expected output: 3 Big boxes and 1 medium
+actual output: 3 Big boxes
+result fail"""
+
+"""Test case: Testing that the users inputs compiles 
+input: (10, 10)
+expected output:4 [Big Boxes filled.]
+actual output:4 [Big Boxes filled.]
+result pass"""
+
+
+
+"Code runs well i just cant find the right way to implement 3's that well "
+
