@@ -33,15 +33,6 @@ rezS = result % small
 # Forth variable converting the name to x
 x = result
 
-print(big)
-print(medium)
-print(small)
-print()
-
-print("Just my little table for the remainder wont be in the final\n")
-print("RemainderL", rezL)
-print("RemainderM", rezM)
-print("RemainderS", rezS)
 
 print()
 
