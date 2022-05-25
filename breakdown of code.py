@@ -23,38 +23,58 @@ print()
 
 # Big box contains the result of the equation entered and a division sign along with the size being 5
 big = int(result // 5)
-rezL = result % big
-
 medium = int(result // 3)
-rezM = result % medium
-
 small = int(result // 1)
+
+
+rezL = result % big
+rezM = result % medium
 rezS = result % small
+
+filterd_M = rezL % 1
+
+
 # Forth variable converting the name to x
 x = result
-
+print(big, "Big")
+print(medium, "Medium ")
+print(small, "small")
 
 print()
 
+print()
+
+print("RemainderL", rezL)
+print("RemainderM", rezM)
+print("RemainderS", rezS)
+
+print()
+
+split = rezL - 2
+
+
 if x > 0:
-    for i in range(1, x):
+    for i in range(5, x):
         if rezL >= 0:
-            print(big, "[Big Boxes filled.]")
+            print(big, "[Big Boxes filled.7]")
             if rezL == 9:
-                print(rezL, "[Medium Boxes filled]")
-            if rezL == 6:
-                print(rezL, "[Medium Boxes filled]")
-            if rezL == 4:
-                print(rezL, "[Small Boxes filled.]")
-            if rezL == 3:
-                print(rezM, "[Medium Boxes filled.]")
-            if rezL == 2:
-                print(rezL, "[Small Boxes filled]")
-            if rezL == 1:
-                print(rezL, "[Small Boxes filled.]")
+                print(rezL, "[Medium Boxes filled6]")
+            for i in range(4, x):
+                if rezL == 4:
+                    print(rezL, "[Small Boxes filled4.]")
+        break
+    for i in range(3, x):
+        if rezL == 6:
+            print(rezL, "[Medium Boxes filled5]")
+        if rezL == 3:
+            print(split, "[Medium Boxes filled5]")
 
-            break
+        if rezL == 2:
+            print(rezL, "[Small Boxes filled2]")
+        if rezL == 1:
+            print(rezL, "[Small Boxes filled.1]")
 
+        break
 
 """Test case: Testing that the users inputs compiles 
 input: (None)
@@ -74,7 +94,6 @@ expected output:4 [Big Boxes filled.]
 actual output:4 [Big Boxes filled.]
 result pass"""
 
-
-
 "Code runs well i just cant find the right way to implement 3's that well "
+
 
