@@ -2,6 +2,7 @@
 # BY Timothy Leatau
 
 # First variable asking for an input number from the user
+
 first_number = int(input("Please enter you're number :"))
 
 print()  # Space to make the command look more free
@@ -23,18 +24,19 @@ small = 0
 
 if result >= 5:  # If the result is more than or equal to 5
     big = int(result // 5)  # Result/Users input divided by 5
-    rem = result % 5
+    rem = result % 5  # Remainder
 
-    if rem >= 3:
-        med = int(rem // 3)
-        rem = rem % 3
+    if rem >= 3:  # If the result is more than or equal to 3
+        med = int(rem // 3)  # Result/Users input divided by 3
+        rem = rem % 3  # Remainder
 
-    if rem > 0:
-        small = int(rem // 1)
-        rem = rem % 1
+    if rem > 0:  # If the result is grater than 0
+        small = int(rem // 1)  # Result/Users input divided by 1
+        rem = rem % 1  # Remainder
 else:
     if first_number == str(""):
         print("Please enter a number")
+
 
 total = big + med + small
 print(big, "Large box filled")
